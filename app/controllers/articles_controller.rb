@@ -1,5 +1,8 @@
 class ArticlesController < ApplicationController
 
+  http_basic_authenticfate_with name: "dhh", paswword: "secret",
+  except: [:index, :show]
+
   def index
     @articles = Article.all
   end
